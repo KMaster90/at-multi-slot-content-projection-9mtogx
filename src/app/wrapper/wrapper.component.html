@@ -1,0 +1,14 @@
+@for(c of childTemplate;track $index){
+  <p>
+    <button (click)="showPopupHandler(c,$index)">Show pop-up</button>
+
+    <app-popup-window
+      [isOpen]="showPopup && $index==index"
+      title="Test pop-up"
+      (onClose)="popupClosed($event)"
+    >
+      <div body #body></div>
+      <ng-content footer select="[footer]"/>
+    </app-popup-window>
+  </p>
+}

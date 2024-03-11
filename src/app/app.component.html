@@ -1,0 +1,13 @@
+<app-wrapper>
+  <div #customInput>
+    This is the content of the pop-up (thanks to content projection)
+  </div>
+
+  <div #customInput>
+    This is the content of the pop-up (WRONG)
+  </div>
+
+  <div footer>
+    <button (click)="showPopup = false">FooterButtonOk</button>
+  </div>
+</app-wrapper>

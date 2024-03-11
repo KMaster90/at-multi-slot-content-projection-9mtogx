@@ -1,0 +1,17 @@
+@if(isOpen){
+<div class="modalW">
+  <!-- Modal content -->
+  <div class="modalW-content">
+    <div class="modalW-header">
+      <span class="close" (click)="closePopup()">&times;</span>
+      <h2>{{ title }}</h2>
+    </div>
+    <div class="modalW-body">
+      <ng-content select="[body]"></ng-content>
+    </div>
+    <div class="modalW-footer">
+      <ng-content select="[footer]"></ng-content>
+    </div>
+  </div>
+</div>
+}
